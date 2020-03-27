@@ -6,3 +6,6 @@ edition = "2018"
 
 [dependencies]
 bitvec = "*"
+
+[patch.crates-io]
+bitvec = { git = "https://github.com/myrrlyn/bitvec.git" }
