@@ -5,10 +5,10 @@ use bitvec::prelude::*;
 fn workaround() {
     let mut bv = BitVec::new();
 
-    bv.extend_from_slice(1u32.bits::<Lsb0>());
+    bv.extend_from_bitslice(1usize.bits::<Lsb0>());
 
     let bb: BitBox = bv.into();
 
-    assert_eq!(bb, BitBox::new(1u32.bits::<Lsb0>()));
+    assert_eq!(bb, BitBox::new(1usize.bits::<Lsb0>()));
 }
 
